@@ -1,0 +1,228 @@
+html,
+body{
+	font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b体,sans-serif;
+	color: #666;
+	background-color: #f0f3ef;
+	min-width: 1280px;
+}
+.style-red {
+	color: #f10215;
+}
+span {
+	padding:0 .5rem;
+}
+.container {
+	width:80%;
+}
+.none{
+	display: none;
+}
+.clear:after {
+	content:'';
+	display: block;
+	overflow: hidden;
+	visibility:hidden;
+	height:0;
+	clear:both;
+}
+.clear {
+	zoom:1;
+}
+/*shortcut
+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+#shortcut {
+	background-color: #e3e4e5;
+	border-bottom: 1px solid #ddd;
+
+}
+
+#shortcut span:hover{
+	color:#BC1010;
+	cursor:pointer;
+}
+.btn-red {
+	float: none;  
+	color:#fff;
+	background:red;
+
+}
+
+
+
+
+
+/*hearder
++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#header{
+	margin-top:2rem;
+	margin-bottom:2rem;
+}
+
+/*header下的搜索*/
+.wrap{
+	display: flex;
+	justify-content: center;
+}
+.search{
+	width: 40%;
+}
+.search_btn {
+	background-color: #f10215;
+	border:none;
+	cursor:pointer;
+}
+.glyphicon-search {
+	color: #fff;
+}
+
+/*header下的购物车*/
+.car{
+	position: relative;
+	margin-left: 3rem;
+	padding:.5rem 4rem;
+	background-color: #fff;
+	border:1px solid #e3e4e5;
+	
+}
+.car span{
+	color:#f10215;
+	cursor:pointer;
+}
+.glyphicon-shopping-cart{
+	color:#f10215;
+}
+.car_shop{
+	position:absolute;
+	/*bottom:0;*/
+	left:0;
+	min-height:4rem;
+	padding:2rem 10rem;
+	background-color: #fff;
+	border:1px solid #e3e4e5;
+	border-top:none;
+	box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+	display: none;
+	z-index: 3;
+}
+
+/*nav
+++++++++++++++++++++++++++++++++++++++++++++++++++*/
+a:hover{
+	text-decoration: none;
+}
+.nav_bar {
+	position:relative;
+}
+.nav_bar ul{
+	margin-bottom: 0
+}
+.nav_bar a{	
+	color:#000;
+}
+
+.nav_bar a:hover{
+	color: #f10215;
+}
+.nav_bar li{
+	list-style: none;
+}
+.nav_all{
+	background:#f10215;
+	cursor: default;
+}
+.all{
+	font-size:20px;
+		color:#fff;
+}
+.nav_items a{
+	font-size:20px;
+
+}
+.nav_items li{
+	float:left;
+	margin-right:3rem;
+}
+
+/*nav-list*/
+
+.nav_list {
+	position:absolute;
+	left:0;
+	width:100%;
+	background:#fff;
+	padding-top:1rem;
+	padding-bottom:.5rem;
+}
+.nav_list a{
+	font-size:14px;
+	color:#626262;
+}
+.nav_list a:hover{
+	color:#ccc;
+}
+.nav_list ul{
+	width:100%;
+	padding-left:0rem;
+}
+.nav_list li{
+	padding-left:1rem;
+	padding:4px 0 4px 1rem;
+}
+.nav_list li:hover{
+	background-color: #f10215;
+}
+.nav_list li:hover a{
+	color:#fff;
+}
+.nav_list em{
+	display: inline-block;
+	font-size:10px;
+    vertical-align: middle;
+    color: #777;
+    padding: 0 2px;
+}
+
+ /*nav list-detail*/
+
+.list_detail{
+	position:absolute;
+	margin-top:1rem;
+	left:100%;
+	padding:.5rem 1rem;
+	background:#f0f3ef;
+	box-shadow: 1px 2px 5px #ccc;
+	z-index: 3;
+}
+.cate_list {
+	width: 768px;
+}
+.cate_list dt{
+	position:relative;
+	float:left;
+	width:70px;
+	padding-right:20px;
+	text-align:right;
+	
+}
+.cate_list dt i{
+	position: absolute;
+	right: 0
+}
+.cate_list dd{
+	float:left;
+	max-width: 600px;
+	
+}
+.cate_list dd a{
+	padding:0 12px;
+	/*border-left:1px solid #ccc;*/
+}
+/*banner
+++++++++++++++++++++++++++++++++++++++++*/
+#banner{
+	margin-top: 15px
+}
+img{
+	width:100%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	div{
+		width:100px;
+		height:50px;
+		border:1px solid #000;
+	}
+	a{
+		position:relative;
+		/*float:left;*/
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<a href="">福蒂克斯</a>
+	</div>
+	<input type="file" name="fileContent" id="file_input">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#file_input").on("change",function(){
+			let fileReader=new FileReader()
+			fileReader.onload=function(){
+				if(/^image/.test(this.type)){
+					$(`<img src="${this.result}">`).appendTo("body");
+				}
+			}
+			console.log(this.files[0]);
+			fileReader.readAsDataURL(this.files[0])
+		})
+		console.log($('#file_input').outerWidth())
+	</script>
+</body>
+</html>

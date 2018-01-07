@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="keykords" content="">
+	<meta name="description" content="">
+	<title>商城</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+	<!-- <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+<!-- shortcut -->
+	<div id="shortcut">
+			<div class="container">
+					<div class="row text-center">
+						<div class="col-sm-6 ">杭州</div>
+						<div class="col-sm-6 ">
+							<span class="" data-toggle="modal" data-target="#myModal">请登录</span>
+							<span class="style-red" data-toggle="modal" data-target="#myModal2">注册</span>
+						</div>
+					</div>
+			</div>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								用户登录
+							</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form">
+								<div class="input-group">
+									<span class="input-group-addon ">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<input type="text" class="form-control" placeholder="邮箱/用户名/手机号">
+								</div>
+								<hr>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+									<input type="password" class="form-control" placeholder="密码">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer ">
+							<button type="submit" class=" center-block col-sm-9 btn btn-red">
+								登录
+							</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+			<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+							</button>
+							<h4 class="modal-title" id="myModalLabel">
+								注册
+							</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="control-label col-sm-2" for="name">用户名</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control " id="name" placeholder="您的账户名和登录名">
+									</div>
+									
+								</div>
+								<div class="form-group">
+									<label for="pwd" class="control-label col-sm-2">设置密码</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="pwd" placeholder="建议至少两种字符组合">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="conf" class="control-label col-sm-2">确认密码</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="conf" placeholder="请再次输入密码">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="phone" class="control-label col-sm-2">中国 +86</label>
+									<div class="col-sm-10">
+										<input type="tellphone" class="form-control" id="phone" placeholder="建议使用常用手机号">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="code" class="control-label col-sm-2">手机验证码</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="code" placeholder="请输入手机验证码">
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class=" center-block col-sm-9 btn btn-red">
+								立即注册
+							</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal -->
+			</div>
+	</div>
+<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="wrap">
+				<div class="search">
+					<form class="search_width" action="" role="form" >
+						<div class="input-group">
+							<input type="search" class="form-control">
+							<span class="input-group-addon search_btn">
+								<i class="glyphicon glyphicon-search"></i>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="car">
+					<i class="glyphicon glyphicon-shopping-cart"></i>
+					<span>我的购物车</span>
+					<div class="car_shop">
+						<img src="http://placehold.it/100x50">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<!--nav  -->
+	<div id="nav">
+		<div class="container nav_bar">
+			<div class="row">
+				<div class="col-sm-2 nav_all">
+					<span class="all"><i class="glyphicon glyphicon-th-list"></i>全部商品分类</span>
+					<div class=" nav_list">
+						<ul class="clear">
+							<li data-id="a"><a href="">手机</a><em>/</em>
+								<a href="">运营商</a><em>/</em>
+								<a href="">智能数码</a>
+							</li>
+							<li data-id="b">
+								<a href="">电视</a><em>/</em>
+								<a href="">空调</a><em>/</em>
+								<a href="">洗衣机</a><em>/</em>
+								<a href="">冰箱</a>
+
+							</li>
+							<li data-id="c">
+								<a href="">厨卫电器</a><em>/</em>
+								<a href="">生活家电</a><em>/</em>
+								<a href="">厨具</a>
+
+							</li>
+							<li data-id="d">
+								<a href="">电脑办公</a><em>/</em>
+								<a href="">相机</a><em>/</em>
+								<a href="">DIY</a>
+
+							</li>
+							<li data-id="e">
+								<a href="">家居</a><em>/</em>
+								<a href="">家具</a><em>/</em>
+								<a href="">家装</a>
+
+							</li>
+							<li data-id="f">
+								<a href="">食品</a><em>/</em>
+								<a href="">酒水</a><em>/</em>
+								<a href="">生鲜</a>
+								<a href="">特产</a>
+
+							</li>
+							<li data-id="f">
+								<a href="">个护化妆</a><em>/</em>
+								<a href="">纸品清洁</a><em>/</em>
+								<a href="">宠物</a>
+
+							</li>
+							<li data-id="g">
+								<a href="">母婴</a><em>/</em>
+								<a href="">玩具</a><em>/</em>
+								<a href="">车床</a>
+								<a href="">童装</a>
+
+							</li><li data-id="h">
+								<a href="">运动</a><em>/</em>
+								<a href="">户外</a><em>/</em>
+								<a href="">足球</a>
+								<a href="">骑行</a>
+
+							</li><li data-id="i">
+								<a href="">男装</a><em>/</em>
+								<a href="">女装</a><em>/</em>
+								<a href="">童装</a>
+
+							</li><li data-id="j">
+								<a href="">鞋靴</a><em>/</em>
+								<a href="">箱包</a><em>/</em>
+								<a href="">钟表</a>
+								<a href="">珠宝</a>
+
+							</li><li data-id="k">
+								<a href="">图书</a><em>/</em>
+								<a href="">电子书</a><em>/</em>
+								<a href="">童书</a>
+
+							</li><li data-id="l">
+								<a href="">图书</a><em>/</em>
+								<a href="">电子书</a><em>/</em>
+								<a href="">童书</a>
+
+							</li><li data-id="m">
+								<a href="">图书</a><em>/</em>
+								<a href="">电子书</a><em>/</em>
+								<a href="">童书</a>
+
+							</li>
+						</ul>
+					</div>
+					<div class="list_detail none">
+						<!-- <div class="sort_btn"></div> -->
+
+						<div id="a" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="b" class="cate_list none">
+								<dl class="clear">
+									<dt>电视<i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd><a href="" target="_blank" name="public0_sortListv6_968427828_word01" title="【爆款最高直降1000元】" class="orange">【爆款最高直降1000元】</a><a href="" target="_blank" name="public0_sortListv6_968427828_word02" title="平板电视">平板电视</a><a href="" target="_blank" name="" title="4K超高清" class="orange">4K超高清</a><a href="" target="_blank" name="public0_sortListv6_968427828_word04" title="海信">海信</a><a href="" target="_blank" name="public0_sortListv6_968427828_word05" title="55英寸电视">55英寸电视</a><a href="" target="_blank" name="public0_sortListv6_968427828_word06" title="智能电视">智能电视</a><a href="" target="_blank" name="public0_sortListv6_968427828_word07" title="创维">创维</a><a href="" target="_blank" name="public0_sortListv6_968427828_word08" title="PPTV">PPTV</a><a href="" target="_blank" name="public0_sortListv6_968427828_word09" title="TCL">TCL</a><a href="" target="_blank" name="public0_sortListv6_968427828_word10" title="三星">三星</a><a href="" target="_blank" name="public0_sortListv6_968427828_word11" title="OLED电视">OLED电视</a><a href="" target="_blank" name="public0_sortListv6_968427828_word12" title="小米">小米</a><a href="" target="_blank" name="public0_sortListv6_968427828_word13" title="长虹">长虹</a><a href="" target="_blank" name="public0_sortListv6_968427828_word14" title="KKTV">KKTV</a><a href="" target="_blank" name="public0_sortListv6_968427828_word15" title="索尼">索尼</a><a href="" target="_blank" name="public0_sortListv6_968427828_word16" title="康佳">康佳</a><a href="" target="_blank" name="public0_sortListv6_968427828_word17" title="先锋">先锋</a><a href="" target="_blank" name="public0_sortListv6_968427828_word18" title="飞利浦">飞利浦</a><a href=" target="_blank" name="public0_sortListv6_968427828_word19" title="量子点电视">量子点电视</a><a href=" target="_blank" name="public0_sortListv6_968427828_word20" title="曲面电视">曲面电视</a></dd>
+								</dl>
+								<dl class="clear">
+									<dt>空调 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd><a href="" name="public0_sortListv6_968427830_word01" title="【空调送温暖 领用500元制暖基金】" class="orange">【空调送温暖 领用500元制暖基金】</a><a href="" target="_blank" name="public0_sortListv6_968427830_word02" title="壁挂式空调">壁挂式空调</a><a href="" target="_blank" name="public0_sortListv6_968427830_word03" title="柜式空调">柜式空调</a><a href="" target="_blank" name="public0_sortListv6_968427830_word04" title="变频" class="orange">变频</a><a href="" target="_blank" name="public0_sortListv6_968427830_word05" title="1.5匹">1.5匹</a><a href="" target="_blank" name="public0_sortListv6_968427830_word06" title="中央空调">中央空调</a><a href="" target="_blank" name="public0_sortListv6_968427830_word07" title="1匹">1匹</a><a href="" target="_blank" name="public0_sortListv6_968427830_word08" title="2匹">2匹</a><a href="" target="_blank" name="public0_sortListv6_968427830_word09" title="3匹">3匹</a><a href="" target="_blank" name="public0_sortListv6_968427830_word10" title="以旧换新">以旧换新</a><a href="" target="_blank" name="public0_sortListv6_968427830_word11" title="0元安装">0元安装</a><a href="" target="_blank" name="public0_sortListv6_968427830_word12" title="合资空调">合资空调</a></dd>
+								</dl>
+						</div>
+						<div id="c" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="d" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="e" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="f" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="g" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="h" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="i" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="j" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="k" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="l" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+						<div id="m" class="cate_list none">
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+										<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+								<dl class="clear">
+									<dt>手机通讯 <i class="glyphicon glyphicon-chevron-right"></i><dt>
+									<dd>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+											<a href="">全部手机</a>
+											<a href="">ipone</a>
+											<a href="">小米</a>
+											<a href="">华为</a>
+											<a href="">三星</a>
+											<a href="">索尼</a>
+											<a href="">oppo</a>
+											<a href="">魅族</a>
+										</dd>
+								</dl>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-9 nav_items">
+					<ul class="clear">
+						<li><a href="">秒杀</a></li>
+						<li><a href="">优惠券</a></li>
+						<li><a href="">海外购</a></li>
+						<li><a href="">特卖</a></li>
+						<li><a href="">生活家电</a></li>
+						<li><a href="">服装城</a></li>
+						<li><a href="">超市</a></li>
+						<li><a href="">拍卖</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+<!-- banner -->
+	<div id="banner">
+		<div class="container">
+			<div class=" col-sm-8 col-sm-offset-2">
+				<div id="myCarousel" class="carousel slide ">
+				    <!-- 轮播（Carousel）指标 -->
+				    <ol class="carousel-indicators">
+				        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				        <li data-target="#myCarousel" data-slide-to="1"></li>
+				        <li data-target="#myCarousel" data-slide-to="2"></li>
+				        <li data-target="#myCarousel" data-slide-to="3"></li>
+				        <li data-target="#myCarousel" data-slide-to="4"></li>
+				        <li data-target="#myCarousel" data-slide-to="5"></li>
+				        <li data-target="#myCarousel" data-slide-to="6"></li>
+				    </ol>   
+				    <!-- 轮播（Carousel）项目 -->
+				    <div class="carousel-inner">
+				        <div class="item active">
+				            <img src="images/1.jpg" alt="First slide">
+				        </div>
+				        <div class="item">
+				            <img src="images/2.jpg" alt="Second slide">
+				        </div>
+				        <div class="item">
+				        	<img src="images/3.jpg" alt="Third slide">
+				        </div>
+				        <div class="item">
+				        	<img src="images/4.jpg" alt="Third slide">
+				        </div>
+				        <div class="item">
+				        	<img src="images/5.jpg" alt="Third slide">
+				        </div>
+				        <div class="item">
+				        	<img src="images/6.jpg" alt="Third slide">
+				        </div>
+				        <div class="item">
+				        	<img src="images/7.jpg" alt="Third slide">
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<!-- @media screen and(min-width:768px 960px,1200px) -->
+
+<script type="text/javascript" src="js/animate.js"></script>
+</body>
+</html>
