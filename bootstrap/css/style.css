@@ -8,9 +8,6 @@ body{
 .style-red {
 	color: #f10215;
 }
-span {
-	padding:0 .5rem;
-}
 .container {
 	width:80%;
 }
@@ -40,6 +37,9 @@ span {
 #shortcut span:hover{
 	color:#BC1010;
 	cursor:pointer;
+}
+#shortcut span{
+	padding:0 .5rem;
 }
 .btn-red {
 	float: none;  
