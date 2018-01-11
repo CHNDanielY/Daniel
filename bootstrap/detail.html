@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="keykords" content="">
+	<meta name="description" content="">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+	<!-- <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	html,body{
+		background-color:#fff;
+	}
+	h2{
+		margin:0;
+	}
+	.container{
+		margin-top: 20px
+	}
+	img{
+		border:1px dotted #ccc;
+		
+		width:100%;
+	}
+	.panel-heading{
+		background-color:#f10215;
+		color:#fff;
+
+	}
+	.panel-bg{
+		color:#999;
+		background-color: #EAEAEA
+	}
+	.left {
+		font-size:16px;
+	}
+	.del_pri{
+		font-size:18px;
+		margin-bottom:15px;
+
+	}
+	.del_pri span{
+		color:#e4393c;
+	}
+	.panel-del div{
+		margin:20px 0;
+
+	}
+	.panel-del div a{
+		display: inline-block;
+		padding:5px 10px;
+		margin:0 10px;
+		border:1px solid #ccc;
+	}
+	a.border_act{
+		border:1px solid #f10215;
+	}
+	.panel-del .btn{
+		margin:0px 0 10px 30px;
+		background-color: #e4393c;
+		color:#fff;
+	}
+	input[type="number"]{
+		/*margin-top:30px;*/
+		display: inline-block;
+		/*margin-top:30px;*/
+		width:50px;
+		height:50px;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col-sm-5">
+		<div class="det_l">
+			<img src="images/detail0.jpg">
+		</div>
+	</div>
+	<div class="col-sm-7">
+		<div class="det_r">
+			<h4>Apple MacBook Pro 15.4英寸笔记本电脑 银色(Core i7 处理器/16GB内存/256GB SSD闪存/Retina屏 MJLQ2CH/A) </h4>
+			<div class="panel">
+				<div class="panel-heading clear">
+						<div class="left"><i class="glyphicon glyphicon-time"></i>&nbsp;京东秒杀</div>
+						<div class="right">距离结束还有19:00:00</div>
+				</div>
+				<div class="panel-body panel-bg">
+					<div class="pull-right"><span>2万评论</span></div>
+					<div class="del_pri">秒杀价<span>￥12788.00</span></div>
+					<div><span>促销</span></div>
+				</div>
+			</div>
+			<div class="panel">
+				<div class="panel-body panel-del">
+					<div>选择版本 <a class=" border_act" href="">裸机版</a><a href="">原厂保修版</a></div>
+					<div>购买方式<a class="border_act" href="">官方标配</a></div>
+					<div>套装<a class=" border_act" href="">优惠套餐1</a><a href="">优惠套餐2</a><a href="">优惠套餐3</a></div>
+					<input type="number" name=""><button class="btn-lg btn">加入购物车</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- @media screen and(min-width:768px 960px,1200px) -->
+
+<script type="text/javascript" src="js/animate.js"></script>
+</body>

@@ -14,6 +14,18 @@ body{
 .none{
 	display: none;
 }
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+a{
+	color:#626262;
+}
+a:hover{
+	color:#f10215;
+}
 .clear:after {
 	content:'';
 	display: block;
@@ -219,10 +231,47 @@ a:hover{
 	/*border-left:1px solid #ccc;*/
 }
 /*banner
-++++++++++++++++++++++++++++++++++++++++*/
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #banner{
 	margin-top: 15px
 }
 img{
 	width:100%;
+}
+/*content
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*content list*/
+#content{
+	margin:30px 0;
+}
+.con_list div p{
+	margin:0;
+	padding:0 20px;
+	line-height: 40px;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+.con_list .price{
+	margin:0 20px;
+	border:1px solid #f10215;
+}
+.con_list .price span:first-child{
+	display: inline-block;
+	background: #f10215;
+	color:#fff;
+}
+.con_list a{
+	display: block;
+	background:#fff;
+	padding:20px;
+}
+
+.con_list a:hover img{
+	transition: all 400ms;
+    opacity:0.8;
+}
+.con_list a:hover del{
+	/*color:#f10215;*/
+	color:#626262;
 }
