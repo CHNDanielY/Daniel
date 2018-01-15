@@ -11,6 +11,9 @@ private stars:boolean[];
 @Input()
 private rating: number = 0;
 
+@Input()
+private readonly: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,7 +24,10 @@ private rating: number = 0;
   	// this.stars=[true,true,true,true,true];
   }
   clickStar(index: number ) {
-    this.rating = index + 1;
-    this.ngOnInit();
+    if (!this.readonly) {
+      this.rating = index + 1;
+      this.ngOnInit();
+    }
+
   }
 }

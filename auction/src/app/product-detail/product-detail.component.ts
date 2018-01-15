@@ -9,6 +9,8 @@ import {Product,ProductService,Comment} from '../shared/product.service';
 export class ProductDetailComponent implements OnInit {
 product:Product;
 comments:Comment[];
+newRating: number = 5;
+newComment: string = "";
   constructor(private routeInfo:ActivatedRoute,private productService:ProductService) { }
 
   ngOnInit() {
