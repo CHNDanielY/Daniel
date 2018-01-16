@@ -13,6 +13,17 @@ html {
     font-size: 1em;
     line-height: 1.4;
 }
+/*body{*/
+    /*font-family: -apple-system,"Helvetica Neue",Helvetica,Arial,"PingFang SC",*/
+    /*"Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif;*/
+    /*font-size: 14px;*/
+    /*line-height: 1.42858;*/
+    /*color: #333;*/
+/*}*/
+body{
+    font-family: -apple-system,"Helvetica Neue",Helvetica,Arial,"PingFang SC",
+    "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif;;
+}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -90,7 +101,99 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*
+*网站css通用样式库
+*/
+.fc9a{
+    color: #009a61;
+}
 
+
+/*
+*公共通用组件样式
+*/
+
+/*公共nav下的menu*/
+.global-nav li a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.global-nav .menu {
+    margin: 12px 0 0 23px;
+}
+.global-nav .menu-item {
+    position: relative;
+    padding: 0;
+    margin:0 0 0 2px;
+    vertical-align: middle;
+    line-height: 34px;
+    color: #666;
+}
+.global-nav .menu-item:first-child {
+    margin: 0;
+}
+.global-nav .menu-item>a {
+    display: inline-block;
+    padding: 0 13px;
+    height: 34px;
+    color: #757575;
+    font-weight: 500;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.global-nav .menu-item .active-nav {
+    color: #009a61;
+    font-weight: 600;
+}
+/*公共头部*/
+.sf-header {
+    position:relative;
+    z-index: 3;
+    border-top: 3px solid #009a61;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.1),0 1px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,.1),0 1px rgba(0,0,0,.1);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1),0 1px rgba(0,0,0,.1);
+    background-color: #fafafa;
+}
+.sf-header .container {
+    height: 64px;
+    line-height: 64px;
+}
+.global-nav .nav {
+    /*height: 54px;*/
+    padding: 0 15px 0;
+}
+.sf-header-logo h1{
+    margin: 0;
+    line-height: 64px;
+}
+.sf-header-logo .logo{
+    float:left;
+    display: block;
+    width: 150px;
+    background: url(../img/logo.svg) no-repeat center;
+    -webkit-background-size: auto 27px;
+    background-size: auto 27px;
+    text-indent: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize;
+
+}
+.sf-header .menu {
+    margin:-1px 0 0 20px;
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -ms-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+
+/*
+*单独特殊样式
+*/
 
 
 
