@@ -34,7 +34,9 @@
     "normalize.css": "7.0.0",
     "run-sequence": "^2.0.0",
     "strip-json-comments": "^2.0.1",
-    "travis-after-all": "^1.4.5"
+    "travis-after-all": "^1.4.5",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
   },
   "engines": {
     "node": ">=4",
@@ -58,7 +60,9 @@
   "name": "html5-boilerplate",
   "scripts": {
     "build": "gulp build",
-    "test": "gulp archive && mocha --compilers js:babel-register --reporter spec --timeout 5000"
+    "test": "gulp archive && mocha --compilers js:babel-register --reporter spec --timeout 5000",
+    "start": "webpack",
+    "server": "webpack-dev-server --open"
   },
   "version": "6.0.1",
   "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",

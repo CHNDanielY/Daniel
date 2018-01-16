@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+///<reference path="../../../node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts"/>
+import {Component, OnInit, Input, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-stars',
