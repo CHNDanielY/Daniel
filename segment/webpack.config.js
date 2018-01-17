@@ -1,3 +1,5 @@
+const webpack= require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: 'eval-source-map',
     entry:  __dirname + "/app/main.js",//已多次提及的唯一入口文件
@@ -10,5 +12,42 @@ module.exports = {
         historyApiFallback: true,//不跳转
         inline: true,//实时刷新
         open:true
-    }
+    },
+    module: {
+        rules:[
+            {
+                test: /(\.jsx|\.js)$/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "env", "react","es2015"
+                        ]
+                    }
+                },
+                exclude:/node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader",
+                        options: {
+                            modules:true,//指定使用css modules
+                            localIdentName: '[name]__[local]--[hash:base64:5]' //指定css的类名格式
+                        }
+
+                    }
+                ]
+            }
+        ]
+    },
+    plugins: [
+        new webpack.BannerPlugin("版权所有，翻版必究"),
+        new HtmlWebpackPlugin({
+            template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+        })
+    ]
 };
