@@ -10,9 +10,9 @@ export class ProductDetailComponent implements OnInit {
 product: Product;
 comments: Comment[];
 newRating: number = 5;
-newComment: string = "hello";
+newComment: string = 'hello';
 isCommentHidden = true;
-  constructor(private routeInfo: ActivatedRoute, private productService:ProductService) { }
+  constructor(private routeInfo: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {let productId: number = this.routeInfo.snapshot.params['productId'];
     this.product = this.productService.getProduct(productId);
