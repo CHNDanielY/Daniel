@@ -107,13 +107,21 @@ textarea {
 .fc9a{
     color: #009a61;
 }
-
+.ml10 {
+    margin-left: 10px;
+}
 
 /*
 *公共通用组件样式
 */
 
 /*公共nav下的menu*/
+
+.global-nav .nav {
+    /*height: 54px;*/
+    padding: 0 15px 0;
+}
+
 .global-nav li a {
     font-size: 16px;
     text-decoration: none;
@@ -122,7 +130,7 @@ textarea {
 .global-nav .menu {
     margin: 12px 0 0 23px;
 }
-.global-nav .menu-item {
+.global-nav .menu-item ,.global-nav .opts-item {
     position: relative;
     padding: 0;
     margin:0 0 0 2px;
@@ -133,7 +141,7 @@ textarea {
 .global-nav .menu-item:first-child {
     margin: 0;
 }
-.global-nav .menu-item>a {
+.global-nav .menu-item>a,.global-nav .opts-item>a {
     display: inline-block;
     padding: 0 13px;
     height: 34px;
@@ -146,6 +154,38 @@ textarea {
 .global-nav .menu-item .active-nav {
     color: #009a61;
     font-weight: 600;
+}
+/*公共nav下的opts*/
+.global-nav .opts {
+    margin:12px 0 0;
+}
+.global-nav .opts-item .btn-signin {
+    color: #009a61;
+    font-size: 14px;
+}
+.global-nav .opts-item .btn-signup {
+    background-color: #009a61;
+    color:#fff;
+    font-size: 14px;
+}
+/*公共nav下的dropdown */
+.global-nav .dropdown-block{
+    min-width: 120px;
+}
+.global-nav .dropdown-block li a {
+    padding: 6px 13px;
+    color: #757575;
+
+}
+.global-nav .dropdown-block li a:hover{
+    color: #009a61;
+}
+.global-nav .notice{
+    padding: 0 5px;
+    margin-left: 10px;
+    font-weight: 400;
+    background-color: #ED1C24;
+
 }
 /*公共头部*/
 .sf-header {
@@ -160,10 +200,6 @@ textarea {
 .sf-header .container {
     height: 64px;
     line-height: 64px;
-}
-.global-nav .nav {
-    /*height: 54px;*/
-    padding: 0 15px 0;
 }
 .sf-header-logo h1{
     margin: 0;
@@ -191,6 +227,26 @@ textarea {
     transition: opacity 0.25s;
 }
 
+.sf-header .opts {
+    display:inline-block;
+    margin:0;
+}
+
+/*公共搜索*/
+.header-search {
+    position: absolute;
+    right: 0;
+    transition:width 0.25s ease;
+    display:inline-block;
+    margin:15px 15px 0 0;
+    vertical-align:middle;
+}
+.header-search .btn{
+    position: absolute;
+    right:0;
+    top:0;
+    color: #999;
+}
 /*
 *单独特殊样式
 */
@@ -301,6 +357,30 @@ textarea {
     /* Style adjustments for viewports that meet the condition */
 }
 
+@media screen and (min-width: 1200px){
+    .header-search{
+        width:265px ;
+    }
+}
+@media screen and (min-width:992px ) and (max-width: 1199px){
+    .header-search{
+        width:160px ;
+    }
+}
+@media screen and (max-width: 991px){
+    .global-nav .menu-item>a{
+        font-size: 14px;
+        padding: 0 6px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .global-nav .nav{
+        line-height: 44px;
+        height: 44px;
+        padding: 0;
+    }
+}
 @media print,
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {

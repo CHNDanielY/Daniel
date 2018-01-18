@@ -23,6 +23,11 @@
         <!-- Add your site or application content here -->
         <div class="global-nav sf-header">
             <div class="container nav">
+                <div class="visible-xs">
+                    <a href="">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
                 <div class="row hidden-xs">
                     <div class="col-sm-8 col-md-9 col-lg-9">
                         <div class="sf-header-logo">
@@ -47,12 +52,49 @@
                                         发现
                                         <i class="fa fa-caret-down" style="font-size: 14px;margin-left:5px"></i>
                                     </a>
+                                <ul class="dropdown-menu dropdown-block" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">活动</a>
+                                    </li><li >
+                                        <a href="#">技术圈<span class="badge notice">hi</span></a>
+                                    </li><li>
+                                        <a href="#">找工作</a>
+                                    </li> <li>
+                                        <a href="#">排行榜</a>
+                                    </li><li>
+                                        <a href="#">徽章</a>
+                                    </li><li >
+                                        <a href="#">笔记</a>
+                                    </li><li>
+                                        <a href="#">开发手册<i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i></a>
+                                    </li> <li>
+                                        <a href="#">广告投放<i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i></a>
+                                    </li>
+                                </ul>
+                                </li><li class="menu-item visible-sm-inline-block">
+                                    <a href="">
+                                        <span class="glyphicon glyphicon-search" style="vertical-align: middle"></span>
+                                    </a>
                                 </li>
 
                             </ul>
+                            <form class="header-search hidden-sm hidden-xs" action="./search.html">
+                                <button class="btn btn-link">
+                                    <span class="sr-only">搜索</span>
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                <input class="form-control" id="searchBox" type="text" placeholder="搜索问题或关键字">
+                            </form>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-3"></div>
+                    <div class="col-sm-4 col-md-3 col-lg-3 text-right">
+                        <ul class="opts list-inline hidden-xs">
+                            <li class="opts-item">
+                                <a class="SFLogin btn-signin" href="">立即登录
+                                </a><a class="SFLogin ml10 btn-signup" href="">免费注册</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
