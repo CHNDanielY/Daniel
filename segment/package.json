@@ -72,7 +72,7 @@
   "license": "MIT",
   "name": "html5-boilerplate",
   "scripts": {
-    "build": "gulp build",
+    "build": "set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress",
     "test": "gulp archive && mocha --compilers js:babel-register --reporter spec --timeout 5000",
     "start": "webpack",
     "server": "webpack-dev-server --open --inline"
