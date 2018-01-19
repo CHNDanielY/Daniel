@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-=======
-///<reference path="../../../node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts"/>
-import {Component, OnInit, Input, OnChanges} from '@angular/core';
->>>>>>> db8fb0a46254e40d1ad20003f6563fb0b9e789ba
 
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 @Component({
   selector: 'app-stars',
   templateUrl: './stars.component.html',

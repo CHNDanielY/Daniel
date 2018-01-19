@@ -13,6 +13,21 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <style>
+            .box{
+                background-color: #000;
+                color:white;
+                padding-left:20px;
+                line-height: 20px;
+            }
+            .dot{
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                /*vertical-align: middle;*/
+            }
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -21,6 +36,10 @@
 
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
+        <span class="box">
+            <span class="dot"></span>
+            这是一段文字
+        </span>
         <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
         <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
