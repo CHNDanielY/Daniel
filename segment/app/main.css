@@ -8,10 +8,15 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
+.roott{
+  background-color: #eee;
+  padding: 10px;
+  border: 3px solid #ccc;
+}
 body {
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:red;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {

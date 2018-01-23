@@ -75,7 +75,7 @@
     "build": "gulp build",
     "test": "gulp archive && mocha --compilers js:babel-register --reporter spec --timeout 5000",
     "start": "webpack",
-    "server": "webpack-dev-server --open --inline"
+    "server": "webpack-dev-server --open"
   },
   "version": "6.0.1",
   "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
