@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import{ActivatedRoute, Params} from  '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 import {Product, ProductService, Comment} from '../shared/product.service';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit, {
 product: Product;
 comments: Comment[];
 newRating: number = 5;
