@@ -19,9 +19,9 @@
     <div>
       <app-stars [(rating)]="newRating" [readonly]="false"></app-stars>
     </div>
-
-      <!--<textarea [(ngModel)]="newComment"></textarea>-->
-
+    <div>
+        <textarea name="" id="" cols="20" rows="3" [(ngModel)]="newComment"></textarea>
+    </div>
     <div>
       <button class="btn" (click)="addComment()">提交</button>
     </div>

@@ -10,7 +10,7 @@ export class ProductDetailComponent implements OnInit {
 product: Product;
 comments: Comment[];
 newRating: number = 5;
-newComment: string = 'hello';
+newComment: string;
 isCommentHidden = true;
   constructor(private routeInfo: ActivatedRoute, private productService: ProductService) { }
 

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
-import { ReactiveFormsModule,FormControl} from '@angular/forms';
+import { ReactiveFormsModule, FormControl, FormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -13,13 +13,13 @@ import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { HomeComponent } from './home/home.component';
 import {ProductService} from './shared/product.service';
-import {Routes, RouterModule} from "@angular/router";
+import {Routes, RouterModule} from '@angular/router';
 import { MulitipePipe } from './pipe/mulitipe.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 const routeConfig:Routes=[
 {path:'',component:HomeComponent},
 {path:'product/:productId',component:ProductDetailComponent}
-]
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +36,7 @@ const routeConfig:Routes=[
   ],
   imports: [
     BrowserModule,
+      FormsModule,
     RouterModule.forRoot(routeConfig),
     ReactiveFormsModule
   ],
