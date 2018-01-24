@@ -110,7 +110,18 @@ textarea {
 .ml10 {
     margin-left: 10px;
 }
-
+.mt30 {
+    margin-top: 30px;
+}
+.colorfff {
+    color:#fff
+}
+.f12 {
+    font-size: 12px;
+}
+.f18 {
+    font-size: 18px;
+}
 /*
 *公共通用组件样式
 */
@@ -241,11 +252,21 @@ textarea {
     margin:15px 15px 0 0;
     vertical-align:middle;
 }
-.header-search .btn{
+.header-search .btn {
     position: absolute;
     right:0;
     top:0;
     color: #999;
+}
+
+/* Banner */
+#loginBanner {
+    position: relative;
+    background-color: #009a61;
+    width: 100%;   
+}
+#loginBanner .container {
+    
 }
 /*
 *单独特殊样式

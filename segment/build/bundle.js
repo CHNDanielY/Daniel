@@ -62,7 +62,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7447f007afe2b5b30f5f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c1259fd07bb28ef4b694"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -730,7 +730,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
@@ -751,13 +751,31 @@ exports.locals = {
 
 __webpack_require__(2);
 
-var greeter = __webpack_require__(6);
+var _main = __webpack_require__(3);
+
+var _main2 = _interopRequireDefault(_main);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var greeter = __webpack_require__(7);
 // document.querySelector("#root").appendChild(greeter());
-var nodes = '<div class="roott">fssf</div>';
+var nodes = '<div class="' + _main2.default["roott"] + '">fssf</div>';
+// var nodes='<h2 class="' + styles.roott + '">a title for CSS Modules</h2>';
+
 document.querySelector("#root").innerHTML = nodes;
+var element = document.createElement("h1");
+// element.className = styles.redButton;
+element.innerHTML = "Hello webpack";
+document.querySelector("#root").appendChild(element);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"format-detection\" content=\"telephone=no, email=no\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n    <title>Document</title>\n</head>\n<body>\n    <div id=\"root\"></div>\n</body>\n</html>"
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -771,7 +789,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(4)(content, options);
+var update = __webpack_require__(5)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(true) {
@@ -788,7 +806,7 @@ if(true) {
 }
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 /*
@@ -870,7 +888,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -926,7 +944,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(5);
+var	fixUrls = __webpack_require__(6);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1242,7 +1260,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 
@@ -1337,13 +1355,13 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var config = __webpack_require__(7);
+var config = __webpack_require__(8);
 module.exports = function () {
     var greet = document.createElement('div');
     greet.textContent = config.greetText;
@@ -1351,7 +1369,7 @@ module.exports = function () {
 };
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = {"greetText":"Hi there and greetings from JSON!"}

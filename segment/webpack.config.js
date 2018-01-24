@@ -29,8 +29,7 @@ module.exports = {
                     }
                 },
                 exclude: /node_modules/
-            },
-            {
+            },{
                 test: /\.css$/,
                 use: [
                     {
@@ -44,7 +43,12 @@ module.exports = {
                         }
                     }
                 ]
+            },{
+                test: /\.html$/,
+                use: "raw-loader"
             }
+            
+            
         ]
     },
     plugins: [
