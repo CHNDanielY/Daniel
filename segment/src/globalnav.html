@@ -10,8 +10,8 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <!--<link rel="stylesheet" href="css/normalize.css">-->
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -23,9 +23,17 @@
         <!-- Add your site or application content here -->
         <div class="global-nav sf-header">
             <nav class="container nav">
-                <div class="visible-xs">
-                    <a href="">
+                <div class="visible-xs  header-response">
+                    <a href="" style="display:block">
                         <i class="fa fa-search"></i>
+                    </a>
+                    <div class="sf-header-logo sf-header-logo-response">
+                        <h1>
+                            <a class="logo" href="/">segmentfault</a>
+                        </h1>
+                    </div>
+                    <a href="" style="display:block;float:right">
+                        <i class="fa fa-user"></i>
                     </a>
                 </div>
                 <div class="row hidden-xs">
@@ -75,6 +83,7 @@
                                     <a href="">
                                         <span class="glyphicon glyphicon-search" style="vertical-align: middle"></span>
                                     </a>
+                                    
                                 </li>
 
                             </ul>
@@ -103,22 +112,59 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-7">
-                            <h1>在 SegmentFault，学习技能、解决问题</h1>
-                            <p>每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
+                            <h1 class="title">在 SegmentFault，学习技能、解决问题</h1>
+                            <p class="desc">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
                         </div>
                         <div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-1">
-                            <form action=""></form>
+                            <form action="" class="register-form mb40 mt65">
+                                <a class="SFLogin btn btn-lg btn-primary mr15" href="">免费注册</a>
+                                <a class="SFLogin btn btn-lg btn-primary" href="">立即登录</a>
+                            </form>
                         </div>
+                        <i class="fa fa-times-circle"></i>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                
+            <div class="container mt30">
+                <div class="row">
+                    <div class="col-md-2 left">
+                        <div class="router-box mb15">
+                            <a class="router-box-item active">
+                                <i class="fa fa-newspaper-o"></i>
+                                <span class="name">今日焦点</span>
+                            </a>
+                            <a class="router-box-item">
+                                <i class="fa fa-thumbs-o-up"></i>
+                                <span class="name">为你推荐</span>
+                            </a>
+                            <a class="router-box-item">
+                                <i class="fa fa-globe"></i>
+                                <span class="name">最新内容</span>
+                            </a>
+                        </div>
+                        <div class="tech-square hidden-sm">
+                            <h5 class="tech-square-title mt0 mb15">技术标签</h5>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/193/974/1939744619-5a65a7b9ecaa0_small"></span><span>区块链</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/194/030/1940304143-5a55e25eefeaf_small"></span><span>人工智能</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>javascript</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>php</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>html</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>css</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>前端</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/868/271/868271510-54cb382abb7a1_small"></span><span>java</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/102/500/1025005915-54cb538538eea_small"></span><span>html5</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/252/177/2521771040-54cb53b372821_small"></span><span>python</span></a>
+                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>更多标签</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 middle">d</div>
+                    <div class="col-md-3 right">d</div>
+                </div>
             </div>
         </div>
-        <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-        <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+        <!-- <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script> -->
+        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script> -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

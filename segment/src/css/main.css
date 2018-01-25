@@ -25,6 +25,10 @@ body{
     "Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif;;
 }
 
+.btn-primary {
+    border-color: #009a61;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -104,23 +108,38 @@ textarea {
 /*
 *网站css通用样式库
 */
-.fc9a{
-    color: #009a61;
-}
-.ml10 {
-    margin-left: 10px;
-}
-.mt30 {
-    margin-top: 30px;
-}
-.colorfff {
-    color:#fff
-}
 .f12 {
     font-size: 12px;
 }
 .f18 {
     font-size: 18px;
+}
+.clr009a{
+    color: #009a61;
+}
+.clrfff {
+    color:#fff
+}
+.mt0 {
+    margin-top:0;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mt65 {
+    margin-top: 65px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.mr15 {
+    margin-right: 15px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.mb40 {
+    margin-bottom: 40px;
 }
 /*
 *公共通用组件样式
@@ -258,7 +277,20 @@ textarea {
     top:0;
     color: #999;
 }
-
+/* header  visible-xs  */
+.header-response .fa-search,.header-response .fa-user{
+    float: left;
+    font-size: 20px;
+    padding: 7px 13px;
+    margin:5px 15px;
+    color: #757575;
+}
+.sf-header-logo-response {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+}
 /* Banner */
 #loginBanner {
     position: relative;
@@ -266,17 +298,101 @@ textarea {
     width: 100%;   
 }
 #loginBanner .container {
-    
+    background: url("../img/banner-bg.svg") ;
+    background-repeat: no-repeat;
+    background-position: right -20px;
 }
+#loginBanner .title {
+    margin-top: 40px;
+    margin-bottom:20px;
+    font-size: 30px;
+    color: #fff;
+}
+#loginBanner .desc {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+#loginBanner .register-form .btn:first-child {
+    color: #009a61;
+    background-color: #fff;
+}
+#loginBanner .register-form .btn:last-child {
+    background-color: #009a61;
+    border-color: #fff;
+}
+#loginBanner .fa-times-circle {
+    position: absolute;
+    top:15px;
+    right: 15px;
+    font-size: 18px;
+    color:rgba(255,255,255,.25);
+    cursor: pointer;
+}
+
+
+
 /*
 *单独特殊样式
 */
-
-
-
-
-
-
+/* 
+* content-left-sidebar 
+*/
+/* router-box */
+.left {
+    margin-left:-10px;
+    color:#757575;
+}
+.left .router-box-item{
+    display: block;
+    height: 34px;
+    padding-left: 10px;
+    margin-bottom: 1px;
+    line-height: 34px;
+    color: #757575;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.left .router-box-item .fa {
+    width: 25px;
+}
+.left .router-box-item.active {
+    background-color: #009a61;
+    color:#fff;
+    font-weight: 900;
+}
+/* tech-square */
+.left .tech-square-title {
+    color: #212121;
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+ }
+ .left .tech-square-title:after{
+     position: absolute;
+     content: "";
+     width: 95px;
+     border-top:1px solid #ccc;
+     margin-top:8px;
+     margin-left:5px;
+ }
+ .left .tech-square-item {
+    display:flex;
+    align-items: center;
+    height: 34px;
+    margin-bottom: 1px;
+    line-height: 34px;
+    color: #757575;
+    text-decoration: none;
+    border-radius: 4px;
+ }
+.left .tech-square-item img {
+    width: 16px;
+}
+.left .tech-square-item-icon {
+    text-align: center;
+    width:35px;
+}
 
 
 
@@ -400,6 +516,14 @@ textarea {
         line-height: 44px;
         height: 44px;
         padding: 0;
+    }
+}
+@media screen and (max-width:991px){
+    .router-box {
+        display: flex;
+    }
+    .router-box-item {
+        flex:1;
     }
 }
 @media print,

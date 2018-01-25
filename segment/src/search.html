@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                x = $("form").serializeArray();
+                console.log(x)
+                $.each(x, function (i, field) {
+                    $("#results").append(field.name + ":" + field.value + " ");
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
-hello
+    <form action="">
+        First name:
+        <input type="text" name="FirstName" value="Bill" />
+        <br /> Last name:
+        <input type="text" name="LastName" value="Gates" />
+        <br />
+    </form>
+
+    <button>序列化表单值</button>
+    <div id="results"></div>
+    
+
 </body>
+
 </html>
