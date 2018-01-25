@@ -29,7 +29,8 @@ module.exports = {
                     }
                 },
                 exclude: /node_modules/
-            },{
+            },
+            {
                 test: /\.css$/,
                 use: [
                     {
@@ -41,14 +42,25 @@ module.exports = {
                             modules: true, //指定使用css modules
                             localIdentName: "[name]__[local]--[hash:base64:5]" //指定css的类名格式
                         }
+                    },
+                    {
+                        // loader: ExtractTextPlugin.extract("style", "css") //分离提取css
                     }
                 ]
-            },{
+            },
+            {
+                test: /\.scss$/,
+                use:[
+                    {
+                        loader: 'style!css!sass'
+                        //  loader: ExtractTextPlugin.extract("style", 'css!sass') //这里用了样式分离出来的插件，如果不想分离出来，可以直接这样写 loader:'style!css!sass'
+                    }
+                ]
+            },
+            {
                 test: /\.html$/,
                 use: "raw-loader"
             }
-            
-            
         ]
     },
     plugins: [
@@ -58,7 +70,8 @@ module.exports = {
             title: "首页",
             filename: "index.html"
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin("style.css") //提取出来的样式放在style.css文件中
     ]
 };
 

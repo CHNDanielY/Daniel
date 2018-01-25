@@ -37,15 +37,19 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "i": "^0.3.6",
     "jquery": "3.2.1",
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "mocha": "^3.2.0",
     "modernizr": "3.5.0",
+    "node-sass": "^4.7.2",
     "node-sri": "^1.1.1",
     "normalize.css": "7.0.0",
+    "postcss-loader": "^2.0.10",
     "raw-loader": "^0.5.1",
     "run-sequence": "^2.0.0",
+    "sass-loader": "^6.0.6",
     "strip-json-comments": "^2.0.1",
     "style-loader": "^0.19.1",
     "travis-after-all": "^1.4.5",
@@ -91,5 +95,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/h5bp/html5-boilerplate.git"
-  }
+  },
+  "dependencies": {}
 }
