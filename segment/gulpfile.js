@@ -1,3 +1,4 @@
+
 var gulp= require('gulp'),
 //加载gulp-load-plugins插件,并马上运行它
 //这个插件能自动帮你加载package.json文件里的gulp插件
@@ -15,7 +16,9 @@ var gulp= require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
-    fileinclude = require('gulp-file-include') ;
+    fileinclude = require('gulp-file-include') ,
+    babel = require('gulp-babel'),
+    connect= require('gulp-connect');
 
 // 样式
 
@@ -33,6 +36,7 @@ var gulp= require('gulp'),
 // // 脚本
 // gulp.task('scripts', function() {
 //     return gulp.src(['src/**/*.js'])
+        // .pipe(babel({ presets: ['es2015'] }))
 //         .pipe(order([
 //             "lib/jquery-2.0.3.min.js",
 //             "lib/*.js",
@@ -95,20 +99,51 @@ var gulp= require('gulp'),
 //     gulp.watch(['dist/**']).on('change', livereload.changed);
 
 // });
-
-gulp.task('html', function() {
-    gulp.src('src/*.html')
-        .pipe(livereload());
+var serconfig={
+    // root:'segment',
+    port:8080,
+    livereload:true
+}
+gulp.task("html", function() {
+    gulp.src("src/*.html")
+        .pipe(connect.reload());
+});
+gulp.task('scripts', function() {
+    gulp.src("src/js/*.js")
+        .pipe(connect.reload());
 });
 gulp.task('styles', function() {
-    gulp.src('src/css/*.css')
-        .pipe(livereload());
+    gulp.src("src/css/*.css")
+        .pipe(connect.reload());
 });
-gulp.task('livereload', function() {
-    livereload.listen(); //要在这里调用listen()方法
-    gulp.watch('src/*.html', ['html']);
-    gulp.watch('src/css/*.css', ['styles']);
+gulp.task('watch',function(){
+    gulp.watch("src/*.html",['html']);
+    gulp.watch("src/js/*.js", ["scripts"]);
+    gulp.watch("src/css/*.css", ["styles"]);
+})
+gulp.task('server',function(){
+    connect.server(serconfig)
 });
-gulp.task('default', function(){
-    gulp.run('livereload');
-});
+gulp.task("default", ["server","watch"]);
+
+// gulp.task('html', function() {
+//     gulp.src('src/*.html')
+//         .pipe(livereload());
+// });
+// gulp.task('styles', function() {
+//     gulp.src('src/css/*.css')
+//         .pipe(livereload());
+// });
+// gulp.task('scripts', function() {
+//     gulp.src('src/js/*.js')
+//         .pipe(livereload());
+// });
+// gulp.task('livereload', function() {
+//     livereload.listen(); //要在这里调用listen()方法
+//     gulp.watch('src/*.html', ['html']);
+//     gulp.watch('src/css/*.css', ['styles']);
+//     gulp.watch('src/js/*.js', ['scripts']);
+// });
+// gulp.task('default', function(){
+//     gulp.run('livereload');
+// });

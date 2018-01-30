@@ -135,6 +135,9 @@ textarea {
 .mr15 {
     margin-right: 15px;
 }
+.mb5{
+    margin-bottom:5px;
+}
 .mb15 {
     margin-bottom: 15px;
 }
@@ -393,8 +396,29 @@ textarea {
     text-align: center;
     width:35px;
 }
+.middle .carousel-indicators {
+    width: auto;
+    right: 20px;
+    left: auto;
+    bottom: 0;
+    margin-left: auto;
+}
+.middle .carousel-inner .item {
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
 
-
+}
+.middle .carousel-caption {
+    bottom: 15px;
+    left:3%;
+    text-align:left;
+    padding-bottom: 0;
+}
+.middle .carousel-caption .sub-title {
+    color: #9e9e9e;
+    
+}
 
 
 
