@@ -116,15 +116,22 @@ gulp.task('styles', function() {
     gulp.src("src/css/*.css")
         .pipe(connect.reload());
 });
+gulp.task('sass',function(){
+    gulp.src("src/sass/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("src/css"))
+    .pipe(connect.reload())
+})
 gulp.task('watch',function(){
-    gulp.watch("src/*.html",['html']);
-    gulp.watch("src/js/*.js", ["scripts"]);
-    gulp.watch("src/css/*.css", ["styles"]);
+    gulp.watch("src/**/*.html",['html']);
+    gulp.watch("src/js/**/*.js", ["scripts"]);
+    gulp.watch("src/css/**/*.css", ["styles"]);
+    gulp.watch("src/sass/**/*.scss", ["sass"]);
 })
 gulp.task('server',function(){
     connect.server(serconfig)
 });
-gulp.task("default", ["server","watch"]);
+gulp.task("default", ["server","watch",]);
 
 // gulp.task('html', function() {
 //     gulp.src('src/*.html')

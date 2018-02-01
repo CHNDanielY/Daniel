@@ -29,13 +29,13 @@
         }
 
         .warp {
-            width: 100%;
-            height: 558px;
+            /* width: 100%; */
+            /* height: 558px; */
             position: absolute;
         }
 
         .warp li {
-            height: 558px;
+            /* height: 558px; */
             float: left;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
@@ -43,7 +43,7 @@
         }
 
         .warp img {
-            width: 100%;
+            /* width: 100%; */
             height: auto;
         }
     </style>
@@ -53,28 +53,28 @@
     <div class="nav">
         <ul class="warp">
             <li>
-                <img src="http://placehold.it">
+                <img src="http://placehold.it/200x200">
             </li>
             <li>
-                <img src="http://placehold.it">
+                <img src="http://placehold.it/200x200">
             </li>
             <li>
-                <img src="http://placehold.it">
+                <img src="http://placehold.it/200x200">
             </li>
 
         </ul>
         <!-- <ul class="point"></ul> -->
 </body>
-
+<!-- 
 <script type="text/javascript">
     var p = 0;
     var warp = $('.warp');
-
+console.log($('.warp').width())
     var firstimg = $('.warp li').first().clone(); //复制第一张图
 
     $('.warp').append(firstimg).width($('.warp li').length * 100 + '%');//添加在最后一张图后面
     $('.warp li').width(100 / $('.warp li').length + '%'); //根据图片数量定义宽度占比
-
+console.log($('.warp').width())
     //自动切换
     console.log($('.warp li').length)
     function change() {
@@ -87,6 +87,6 @@
     }
 
     setInterval(change, 2300);
-</script>
+</script> -->
 
 </html>

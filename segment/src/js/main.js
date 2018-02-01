@@ -37,15 +37,11 @@ $(function(){
     function animate(){ 
             p++;
         if (p ==5) {
-            p = 0;
-            $detail.css("left",0)
+            p = 1;
+            $(".live-recommend-detail").css("left", 0);
         }
         console.log(p)
-        
-            $detail.stop().animate({
-                left:-p * 212 + "px"
-            });    
-
+                $detail.stop().animate({ left: -p * 212 + "px" });    
     }
             timer=setInterval(function(){
                     animate()
