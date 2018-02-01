@@ -1,34 +1,92 @@
-<html>
-    
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("button").click(function () {
-                x = $("form").serializeArray();
-                console.log(x)
-                $.each(x, function (i, field) {
-                    $("#results").append(field.name + ":" + field.value + " ");
-                });
-            });
-        });
-    </script>
+    <title></title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        body,
+        html {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .nav {
+            width: 100%;
+            height: 558px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .warp {
+            width: 100%;
+            height: 558px;
+            position: absolute;
+        }
+
+        .warp li {
+            height: 558px;
+            float: left;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .warp img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <form action="">
-        First name:
-        <input type="text" name="FirstName" value="Bill" />
-        <br /> Last name:
-        <input type="text" name="LastName" value="Gates" />
-        <br />
-    </form>
+    <div class="nav">
+        <ul class="warp">
+            <li>
+                <img src="http://placehold.it">
+            </li>
+            <li>
+                <img src="http://placehold.it">
+            </li>
+            <li>
+                <img src="http://placehold.it">
+            </li>
 
-    <button>序列化表单值</button>
-    <div id="results"></div>
-    
-
+        </ul>
+        <!-- <ul class="point"></ul> -->
 </body>
+
+<script type="text/javascript">
+    var p = 0;
+    var warp = $('.warp');
+
+    var firstimg = $('.warp li').first().clone(); //复制第一张图
+
+    $('.warp').append(firstimg).width($('.warp li').length * 100 + '%');//添加在最后一张图后面
+    $('.warp li').width(100 / $('.warp li').length + '%'); //根据图片数量定义宽度占比
+
+    //自动切换
+    console.log($('.warp li').length)
+    function change() {
+        p++;
+        if (p == $('.warp li').length) {
+            p = 1;
+            $('.warp').css('left', '0px');
+        };
+        warp.stop().animate({ left: -p * 100 + '%' }, 230);
+    }
+
+    setInterval(change, 2300);
+</script>
 
 </html>

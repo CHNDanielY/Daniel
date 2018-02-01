@@ -27,22 +27,34 @@ $(function(){
      var timer = null,
      $detail = $(".live-recommend-detail"),
      $item = $(".live-recommend-detail-item");
-    // for(i=0;i<3;i++){
-        $detail.prepend(listItem);
-    // }
-     // console.log($item.width())
-    // console.log(parseInt($detail.css('left'))-192+"px")
-    function animate(){
-        $detail.animate({
-            left:parseInt($detail.css('left'))-212+"px"
-        })
+     console.log($(".live-recommend-detail-item").length);
+    for(i=0;i<3;i++){
+        $detail.append(listItem);
     }
-    // if()
+    console.log($(".live-recommend-detail-item").length);
+    var p = 0;
+    var len= $(".live-recommend-detail-item").length;
+    function animate(){ 
+            p++;
+        if (p ==5) {
+            p = 0;
+            $detail.css("left",0)
+        }
+        console.log(p)
+        
+            $detail.stop().animate({
+                left:-p * 212 + "px"
+            });    
+
+    }
+            timer=setInterval(function(){
+                    animate()
+                // console.log(i)
+        },3000);
+
      $(document).on("click",'.live-recommend-detail-item',function() {
         alert($(this).index());
     });
-    timer=setInterval(function(){
-        // animate()
-    },3000)
-    console.log(timer)
+    
+    // console.log(timer)
 })
