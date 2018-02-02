@@ -18,7 +18,8 @@ var gulp= require('gulp'),
     livereload = require('gulp-livereload'),
     fileinclude = require('gulp-file-include') ,
     babel = require('gulp-babel'),
-    connect= require('gulp-connect');
+    connect= require('gulp-connect'),
+    plumber=require('gulp-plumber')
 
 // 样式
 
@@ -117,10 +118,16 @@ gulp.task('styles', function() {
         .pipe(connect.reload());
 });
 gulp.task('sass',function(){
-    gulp.src("src/sass/*.scss")
-    .pipe(sass())
-    .pipe(gulp.dest("src/css"))
-    .pipe(connect.reload())
+    gulp
+        .src("src/sass/*.scss")
+        .pipe(plumber({
+            errorHandler:function(error){
+                this.emit('end')
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest("src/css"))
+        .pipe(connect.reload())
 })
 gulp.task('watch',function(){
     gulp.watch("src/**/*.html",['html']);

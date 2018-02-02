@@ -1,0 +1,39 @@
+.right .activity-recommend .activity-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 15px; }
+
+.right .activity-recommend .activity-recommend-item {
+  display: block;
+  text-decoration: none;
+  padding: 8px 0; }
+  .right .activity-recommend .activity-recommend-item:not(:last-child) {
+    border-bottom: 1px dashed #eee; }
+  .right .activity-recommend .activity-recommend-item .activity-date {
+    color: #017e66;
+    margin-right: 10px;
+    text-align: center; }
+  .right .activity-recommend .activity-recommend-item .activity-date-wrapper {
+    width: 32px;
+    height: 34px;
+    background-color: #c8e9de;
+    border-radius: 2px; }
+    .right .activity-recommend .activity-recommend-item .activity-date-wrapper .activity-date-up {
+      transform: scale(0.833); }
+    .right .activity-recommend .activity-recommend-item .activity-date-wrapper .activity-date-down {
+      background-color: #ebf7f3;
+      margin-top: -2px; }
+  .right .activity-recommend .activity-recommend-item .activity-detail {
+    margin-left: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #999; }
+  .right .activity-recommend .activity-recommend-item .activity-detail-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+    margin-bottom: 2px; }
+  .right .activity-recommend .activity-recommend-item .activity-state {
+    font-size: 12px;
+    color: #f5a623; }

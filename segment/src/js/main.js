@@ -40,7 +40,7 @@ $(function(){
             p = 1;
             $(".live-recommend-detail").css("left", 0);
         }
-        console.log(p)
+        // console.log(p)
                 $detail.stop().animate({ left: -p * 212 + "px" });    
     }
             timer=setInterval(function(){

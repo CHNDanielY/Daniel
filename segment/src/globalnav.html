@@ -1,266 +1,388 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>globalnav</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">        <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="css/normalize.css">-->
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/demo1.css">
-    </head>
-    <body>
-        <!--[if lte IE 9]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>globalnav</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/demo1.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div class="global-nav sf-header">
-            <nav class="container nav">
-                <div class="visible-xs  header-response">
-                    <a href="" style="display:block">
-                        <i class="fa fa-search"></i>
-                    </a>
-                    <div class="sf-header-logo sf-header-logo-response">
+    <!-- Add your site or application content here -->
+    <div class="global-nav sf-header">
+        <nav class="container nav">
+            <div class="visible-xs  header-response">
+                <a href="" style="display:block">
+                    <i class="fa fa-search"></i>
+                </a>
+                <div class="sf-header-logo sf-header-logo-response">
+                    <h1>
+                        <a class="logo" href="/">segmentfault</a>
+                    </h1>
+                </div>
+                <a href="" style="display:block;float:right">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+            <div class="row hidden-xs">
+                <div class="col-sm-8 col-md-9 col-lg-9">
+                    <div class="sf-header-logo">
                         <h1>
                             <a class="logo" href="/">segmentfault</a>
                         </h1>
                     </div>
-                    <a href="" style="display:block;float:right">
-                        <i class="fa fa-user"></i>
-                    </a>
-                </div>
-                <div class="row hidden-xs">
-                    <div class="col-sm-8 col-md-9 col-lg-9">
-                        <div class="sf-header-logo">
-                            <h1>
-                                <a class="logo" href="/">segmentfault</a>
-                            </h1>
-                        </div>
-                        <div>
-                            <ul class="menu list-inline pull-left hidden-xs">
-                                <li class="menu-item">
-                                    <a class="active-nav" href="/">首页</a>
-                                </li><li class="menu-item">
-                                    <a href="">问答</a>
-                                </li><li class="menu-item">
-                                    <a href="">头条</a>
-                                </li><li class="menu-item">
-                                    <a href="">专栏</a>
-                                </li><li class="menu-item">
-                                    <a href="">讲堂</a>
-                                </li><li class="menu-item dropdown">
-                                    <a class="dropdown-toggle dropdownBtn" href="" data-toggle="dropdown">
-                                        发现
-                                        <i class="fa fa-caret-down" style="font-size: 14px;margin-left:5px"></i>
-                                    </a>
+                    <div>
+                        <ul class="menu list-inline pull-left hidden-xs">
+                            <li class="menu-item">
+                                <a class="active-nav" href="/">首页</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">问答</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">头条</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">专栏</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">讲堂</a>
+                            </li>
+                            <li class="menu-item dropdown">
+                                <a class="dropdown-toggle dropdownBtn" href="" data-toggle="dropdown">
+                                    发现
+                                    <i class="fa fa-caret-down" style="font-size: 14px;margin-left:5px"></i>
+                                </a>
                                 <ul class="dropdown-menu dropdown-block" role="menu" aria-labelledby="dropdownMenu1">
                                     <li>
                                         <a href="#">活动</a>
-                                    </li><li >
-                                        <a href="#">技术圈<span class="badge notice">hi</span></a>
-                                    </li><li>
+                                    </li>
+                                    <li>
+                                        <a href="#">技术圈
+                                            <span class="badge notice">hi</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#">找工作</a>
-                                    </li> <li>
+                                    </li>
+                                    <li>
                                         <a href="#">排行榜</a>
-                                    </li><li>
+                                    </li>
+                                    <li>
                                         <a href="#">徽章</a>
-                                    </li><li >
+                                    </li>
+                                    <li>
                                         <a href="#">笔记</a>
-                                    </li><li>
-                                        <a href="#">开发手册<i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i></a>
-                                    </li> <li>
-                                        <a href="#">广告投放<i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">开发手册
+                                            <i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">广告投放
+                                            <i class="ml10 fa fa-external-link-square" style="font-size: 12px;color:#F5A623;"></i>
+                                        </a>
                                     </li>
                                 </ul>
-                                </li><li class="menu-item visible-sm-inline-block">
-                                    <a href="">
-                                        <span class="glyphicon glyphicon-search" style="vertical-align: middle"></span>
-                                    </a>
-                                    
-                                </li>
-
-                            </ul>
-                            <form class="header-search hidden-sm hidden-xs" action="./search.html">
-                                <button class="btn btn-link">
-                                    <span class="sr-only">搜索</span>
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                <input class="form-control" id="searchBox" type="text" placeholder="搜索问题或关键字">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-3 col-lg-3 text-right">
-                        <ul class="opts list-inline hidden-xs">
-                            <li class="opts-item">
-                                <a class="SFLogin btn-signin" href="">立即登录
-                                </a><a class="SFLogin ml10 btn-signup" href="">免费注册</a>
                             </li>
+                            <li class="menu-item visible-sm-inline-block">
+                                <a href="">
+                                    <span class="glyphicon glyphicon-search" style="vertical-align: middle"></span>
+                                </a>
+
+                            </li>
+
                         </ul>
+                        <form class="header-search hidden-sm hidden-xs" action="./search.html">
+                            <button class="btn btn-link">
+                                <span class="sr-only">搜索</span>
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            <input class="form-control" id="searchBox" type="text" placeholder="搜索问题或关键字">
+                        </form>
                     </div>
                 </div>
-            </nav>
-        </div>
-        <div class="wrapper">
-            <div class="hidden-xs hidden-sm loginBanner" id="loginBanner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-7">
-                            <h1 class="title">在 SegmentFault，学习技能、解决问题</h1>
-                            <p class="desc">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
-                        </div>
-                        <div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-1">
-                            <form action="" class="register-form mb40 mt65">
-                                <a class="SFLogin btn btn-lg btn-primary mr15" href="">免费注册</a>
-                                <a class="SFLogin btn btn-lg btn-primary" href="">立即登录</a>
-                            </form>
-                        </div>
-                        <i class="fa fa-times-circle"></i>
-                    </div>
+                <div class="col-sm-4 col-md-3 col-lg-3 text-right">
+                    <ul class="opts list-inline hidden-xs">
+                        <li class="opts-item">
+                            <a class="SFLogin btn-signin" href="">立即登录
+                            </a>
+                            <a class="SFLogin ml10 btn-signup" href="">免费注册</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="container mt30">
+        </nav>
+    </div>
+    <div class="wrapper">
+        <div class="hidden-xs hidden-sm loginBanner" id="loginBanner">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-2 left">
-                        <div class="router-box mb15">
-                            <a class="router-box-item active">
-                                <i class="fa fa-newspaper-o"></i>
-                                <span class="name">今日焦点</span>
+                    <div class="col-lg-6 col-md-7">
+                        <h1 class="title">在 SegmentFault，学习技能、解决问题</h1>
+                        <p class="desc">每个月，我们帮助 1000 万的开发者解决各种各样的技术问题。并助力他们在技术能力、职业生涯、影响力上获得提升。</p>
+                    </div>
+                    <div class="col-lg-3 col-lg-offset-3 col-md-4 col-md-offset-1">
+                        <form action="" class="register-form mb40 mt65">
+                            <a class="SFLogin btn btn-lg btn-primary mr15" href="">免费注册</a>
+                            <a class="SFLogin btn btn-lg btn-primary" href="">立即登录</a>
+                        </form>
+                    </div>
+                    <i class="fa fa-times-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container mt30">
+            <div class="row">
+                <div class="col-md-2 left">
+                    <div class="router-box mb15">
+                        <a class="router-box-item active">
+                            <i class="fa fa-newspaper-o"></i>
+                            <span class="name">今日焦点</span>
+                        </a>
+                        <a class="router-box-item">
+                            <i class="fa fa-thumbs-o-up"></i>
+                            <span class="name">为你推荐</span>
+                        </a>
+                        <a class="router-box-item">
+                            <i class="fa fa-globe"></i>
+                            <span class="name">最新内容</span>
+                        </a>
+                    </div>
+                    <div class="tech-square hidden-sm">
+                        <h5 class="tech-square-title mt0 mb15">技术标签</h5>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <img src="https://sfault-avatar.b0.upaiyun.com/193/974/1939744619-5a65a7b9ecaa0_small">
+                            </span>
+                            <span>区块链</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <img src="https://sfault-avatar.b0.upaiyun.com/194/030/1940304143-5a55e25eefeaf_small">
+                            </span>
+                            <span>人工智能</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>javascript</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>php</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>html</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>css</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>前端</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <img src="https://sfault-avatar.b0.upaiyun.com/868/271/868271510-54cb382abb7a1_small">
+                            </span>
+                            <span>java</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <img src="https://sfault-avatar.b0.upaiyun.com/102/500/1025005915-54cb538538eea_small">
+                            </span>
+                            <span>html5</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <img src="https://sfault-avatar.b0.upaiyun.com/252/177/2521771040-54cb53b372821_small">
+                            </span>
+                            <span>python</span>
+                        </a>
+                        <a class="tech-square-item" href="">
+                            <span class="tech-square-item-icon">
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </span>
+                            <span>更多标签</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-7 middle">
+                    <div id="carousel-example-generic" class="carousel slide mb5">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <a href="" class="item active" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/72cf87c832282397df4576aa6d810db2.png); background-size: cover">
+                                <div class="carousel-caption">
+                                    <h3>React 中 setState() 为什么是异步的？</h3>
+                                    <h5 class="sub-title"> React 核心成员 Dan 的回复表明这不是个历史包袱…</h5>
+                                </div>
                             </a>
-                            <a class="router-box-item">
-                                <i class="fa fa-thumbs-o-up"></i>
-                                <span class="name">为你推荐</span>
+                            <a href="" class="item" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/fab4fe957dbe5076184d1ed5e63c3f42.png); background-size: cover">
+                                <div class="carousel-caption">
+                                    <h3>70行 python 代码实现壁纸批量下载</h3>
+                                    <h5 class="sub-title">爬虫批量下载某壁纸网站的高清壁纸</h5>
+                                </div>
                             </a>
-                            <a class="router-box-item">
-                                <i class="fa fa-globe"></i>
-                                <span class="name">最新内容</span>
+                            <a href="" class="item" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/dce669423d79703d24e8f05b2c8b1231.png); background-size: cover">
+                                <div class="carousel-caption">
+                                    <h3>SpringBoot 中使用 POI，快速实现 Excel 导入导出</h3>
+                                    <h5 class="sub-title"></h5>
+                                </div>
                             </a>
-                        </div>
-                        <div class="tech-square hidden-sm">
-                            <h5 class="tech-square-title mt0 mb15">技术标签</h5>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/193/974/1939744619-5a65a7b9ecaa0_small"></span><span>区块链</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/194/030/1940304143-5a55e25eefeaf_small"></span><span>人工智能</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>javascript</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>php</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>html</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>css</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>前端</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/868/271/868271510-54cb382abb7a1_small"></span><span>java</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/102/500/1025005915-54cb538538eea_small"></span><span>html5</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><img src="https://sfault-avatar.b0.upaiyun.com/252/177/2521771040-54cb53b372821_small"></span><span>python</span></a>
-                            <a class="tech-square-item" href=""><span class="tech-square-item-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span><span>更多标签</span></a>
                         </div>
                     </div>
-                    <div class="col-md-7 middle">
-                        <div id="carousel-example-generic" class="carousel slide mb5">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <a href="" class="item active" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/72cf87c832282397df4576aa6d810db2.png); background-size: cover">
-                                    <div class="carousel-caption">
-                                        <h3>React 中 setState() 为什么是异步的？</h3>
-                                        <h5 class="sub-title"> React 核心成员 Dan 的回复表明这不是个历史包袱…</h5>
-                                    </div>
-                                </a>
-                                <a href="" class="item" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/fab4fe957dbe5076184d1ed5e63c3f42.png); background-size: cover">
-                                    <div class="carousel-caption">
-                                        <h3>70行 python 代码实现壁纸批量下载</h3>
-                                        <h5 class="sub-title">爬虫批量下载某壁纸网站的高清壁纸</h5>
-                                    </div>
-                                </a>
-                                <a href="" class="item" style="background:url(https://afp.alicdn.com/afp-creative/creative/u124884735/dce669423d79703d24e8f05b2c8b1231.png); background-size: cover">
-                                    <div class="carousel-caption">
-                                        <h3>SpringBoot 中使用 POI，快速实现 Excel 导入导出</h3>
-                                        <h5 class="sub-title"></h5>
-                                    </div>
-                                </a>
+                    <div class="news-list">
+                        <div class="news-item stream-item">
+                            <div class="stream-item-zan btn btn-default">
+                                <span class="stream-item-zan-icon"></span>
+                                <span class="stream-item-zan-number">111</span>
                             </div>
-                        </div>
-                        <div class="news-list">
-                            <div class="news-item stream-item">
-                                <div class="stream-item-zan btn btn-default">
-                                    <span class="stream-item-zan-icon"></span>
-                                    <span class="stream-item-zan-number">111</span>
+                            <div class="news-item-info">
+                                <div class="mb6">
+                                    <h4 class="news-item-title mt0">
+                                        <a class="mr10" href="">javascript 总结（常用工具类的封装）</a>
+                                    </h4>
+                                    <ul class="ib taglist">
+                                        <li class="tagPopup">
+                                            <a class="tag" href="">javascript</a>
+                                        </li>
+                                        <li class="tagPopup">
+                                            <a class="tag" href="">css</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="news-item-info">
-                                    <div class="mb6">
-                                        <h4 class="news-item-title mt0"><a class="mr10" href="">javascript 总结（常用工具类的封装）</a></h4>
-                                        <ul class="ib taglist">
-                                            <li class="tagPopup"><a class="tag" href="">javascript</a></li>
-                                            <li class="tagPopup"><a class="tag" href="">css</a></li>
-                                        </ul>
-                                    </div>
-                                    <p class="news-item-meta">
-                                        <a href=""><img class="avatars-img" src="https://sfault-avatar.b0.upaiyun.com/296/874/2968748607-59ff0740eb58a_small" alt=""></a>
-                                        <a href="">冬子</a>
-                                        <span>2天前</span>
-                                        <span class="dot">·</span>
-                                        <span>
-                                            <a href="">31评论</a>
-                                        </span>
-                                        <span class="dot">·</span>
-                                        <a href="">专栏</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 right">
-                        <div class="mb30">
-                            <div class="sfad-list">
-                                <div class="sfad-item">
-                                    <a href=""><img src="https://afp.alicdn.com/afp-creative/creative/u124884735/5707aa117ca5891562332a9c4802a6da.png" alt=""></a> 
-                                </div>
-                                <div class="sfad-item">
-                                    <a href=""><img src="https://afp.alicdn.com/afp-creative/creative/u124884735/35da74ddb8f42e29fece338c35cddcb3.png" alt=""></a> 
-                                </div>
-                                <div class="sfad-item">
-                                    <a href=""><img src="https://afp.alicdn.com/afp-creative/creative/u124884735/1b47126b9af3342696de6ff049688cdd.png" alt=""></a> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sf-live-recommend">
-                            <div class="live-recommend">
-                                <div class="live-recommend-header">
-                                    <h4><a href="">讲座推荐</a></h4>
-                                    <span class="live-recommend-operation">
-                                        <i class="fa fa-chevron-circle-left arrow-left arrow"></i>
-                                        <i class="fa fa-chevron-circle-right arrow-right arrow"></i>
+                                <p class="news-item-meta">
+                                    <a href="">
+                                        <img class="avatars-img" src="https://sfault-avatar.b0.upaiyun.com/296/874/2968748607-59ff0740eb58a_small" alt="">
+                                    </a>
+                                    <a href="">冬子</a>
+                                    <span>2天前</span>
+                                    <span class="dot">·</span>
+                                    <span>
+                                        <a href="">31评论</a>
                                     </span>
+                                    <span class="dot">·</span>
+                                    <a href="">专栏</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 right">
+                    <div class="mb30">
+                        <div class="sfad-list">
+                            <div class="sfad-item">
+                                <a href="">
+                                    <img src="https://afp.alicdn.com/afp-creative/creative/u124884735/5707aa117ca5891562332a9c4802a6da.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sfad-item">
+                                <a href="">
+                                    <img src="https://afp.alicdn.com/afp-creative/creative/u124884735/35da74ddb8f42e29fece338c35cddcb3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="sfad-item">
+                                <a href="">
+                                    <img src="https://afp.alicdn.com/afp-creative/creative/u124884735/1b47126b9af3342696de6ff049688cdd.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sf-live-recommend">
+                        <div class="live-recommend">
+                            <div class="live-recommend-header">
+                                <h4>
+                                    <a href="">讲座推荐</a>
+                                </h4>
+                                <span class="live-recommend-operation">
+                                    <i class="fa fa-chevron-circle-left arrow-left arrow"></i>
+                                    <i class="fa fa-chevron-circle-right arrow-right arrow"></i>
+                                </span>
+                            </div>
+                            <div class="live-recommend-wrapper">
+                                <div class="live-recommend-detail">
                                 </div>
-                                <div class="live-recommend-wrapper">
-                                    <div class="live-recommend-detail">
+                            </div>
+                        </div>
+                        <div class="activity-recommend mb30">
+                            <a class="more-btn pull-right" href="">更多</a>
+                            <div class="activity-title">
+                                活动推荐
+                            </div>
+                            <div class="activity-recommend-area">
+                                <a class="activity-recommend-item" href="">
+                                    <div class="activity-date pull-left">
+                                        <div class="activity-date-wrapper">
+                                            <div class="activity-date-up f12">FEB</div>
+                                            <div class="activity-date-down f14">03</div>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="activity-detail">
+                                        <div class="activity-detail-title">【广州站】CODING 技术小馆：高可用实践探索</div>
+                                        <p>
+                                            <span>广州</span>
+                                            <span class="dot">·</span>
+                                            <span>02-03&nbsp;周六</span>
+                                            <span></span>
+                                            <span class="dot">·</span>
+                                            <span class="activity-state">报名中</span>
+                                        </p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script> -->
-        <!-- <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script> -->
-        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script> -->
-        <script src="js/plugins.js"></script>
-        
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-            </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </body>
+    </div>
+    <!-- <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script> -->
+    <script src="js/plugins.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
 </html>
